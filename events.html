@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts.js"></script>
+<script>
+    $(document).ready(function() {
+    $("input[name$='filter']").click(function() {
+        var test = $(this).val();
+
+        $("div.card.phases").hide();
+        $(test).show();
+    });
+});
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("navDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(e) {
+    if (!e.target.matches('.dropbtn')) {
+    var navDropdown = document.getElementById("navDropdown");
+      if (navDropdown.classList.contains('show')) {
+        navDropdown.classList.remove('show');
+      }
+    }
+  }
+</script>
+<title>Events</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<!-- Note -->
+<!--
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div> 
+-->
+
+<!-- Header -->
+<div class="header">
+    <img src="images/logo.png" alt="logo"/>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Events
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="navDropdown">
+    <a href="#phases">Moon Phases</a>
+    <a href="#retrogrades">Retrogrades</a>
+    <a href="#planet-viewing">Planet Viewing</a>
+    <a href="#meteor-showers">Meteor Showers</a>    
+  </div>
+  </div> 
+  <a href="glossary.html">Glossary</a>
+</div>
+
+<div class="directory events">
+  <a href="#phases">Moon Phases</a>
+  <a href="#retrogrades">Retrogrades</a>
+  <a href="#planet-viewing">Planet Viewing</a>
+  <a href="#meteor-showers">Meteor Showers</a>
+</div>
+
+<div class="content phases" id="phases">
+    <h2 class="section">Moon Phases</h2>
+    <div class="radio-filter">
+        <label>
+            Filter:
+        </label>
+        <label>
+            <input type="radio" name="filter" value=".full, .new" checked="checked" /> All
+        </label>
+        <label>
+            <input type="radio" name="filter" value=".full"/> Full
+        </label>
+        <label>
+            <input type="radio" name="filter" value=".new"/> New
+        </label>
+    </div>
+    <div class="card phases new">        
+		<h2 class="date">January 02, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+		<h2 class="date">January 17, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">February 01, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+		<h2 class="date">February 16, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">March 02, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+		<h2 class="date">March 18, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">April 01, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+		<h2 class="date">April 16, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">April 30, 2022</h2>
+		<div class="event-content">
+            <h3 class="phase">New Moon</h3>
+            <p><a href="glossary.html#blackmoon">Black Moon*</a></p>
+		</div>
+    </div>
+    <div class="card phases full">        
+		<h2 class="date">May 16, 2022</h2>
+		<div class="event-content">
+            <h3 class="phase">Full Moon</h3>
+            <p>Total Eclipse</p>
+		</div>
+    </div>
+    <div class="card phases new">        
+		<h2 class="date">May 30, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>		
+	<div class="card phases full">        
+		<h2 class="date">June 14, 2022</h2>
+		<div class="event-content">
+            <h3 class="phase">Full Moon</h3>
+            <p>Super Moon</p>
+        </div>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">June 28, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+	<div class="card phases full">        
+		<h2 class="date">July 13, 2022</h2>
+		<div class="event-content">
+            <h3 class="phase">Full Moon</h3>
+            <p>Super Moon</p>
+        </div>
+    </div>	
+    <div class="card phases new">        
+	<h2 class="date">July 28, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+	<h2 class="date">August 11, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+	<h2 class="date">August 27, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+	<h2 class="date">September 10, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+	<h2 class="date">September 25, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+	<h2 class="date">October 09, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+	<h2 class="date">October 25, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>	
+    <div class="card phases full">        
+		<h2 class="date">November 08, 2022</h2>
+		    <div class="event-content">
+            <h3 class="phase">Full Moon</h3>
+            <p>Total Eclipse</p>
+		</div>
+    </div>
+    <div class="card phases new">        
+		<h2 class="date">November 23, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>		
+    <div class="card phases full">        
+		<h2 class="date">December 07, 2022</h2>
+        <h3 class="phase">Full Moon</h3>
+    </div>	
+    <div class="card phases new">        
+		<h2 class="date">December 23, 2022</h2>
+        <h3 class="phase">New Moon</h3>
+    </div>
+</div>
+    
+<div class="content retrogrades" id="retrogrades">
+    <h2 class="section">Planet Retrogrades</h2>
+    <div class="card retrograde">
+        <h2 class="planet">Mercury</h2>
+        <div class="event-content">
+            <p class="start">Start: January 14, 2022</p>
+            <p class="end">End: February 03, 2022</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Mercury</h2>
+        <div class="event-content">
+            <p class="start">Start: May 10, 2022</p>
+            <p class="end">End: June 03, 2022</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Mercury</h2>
+        <div class="event-content">
+            <p class="start">Start: September 09, 2022</p>
+            <p class="end">End: October 02, 2022</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Mercury</h2>
+        <div class="event-content">
+            <p class="start">Start: December 29, 2022</p>
+            <p class="end">End: January 18, 2023</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Venus</h2>
+        <div class="event-content">
+            <p class="start">Start: December 19, 2021</p>
+            <p class="end">End: January 29, 2022</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Mars</h2>
+        <div class="event-content">
+            <p class="start">Start: October 30, 2022</p>
+            <p class="end">End: January 12, 2023</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Jupiter</h2>
+        <div class="event-content">
+            <p class="start">Start: July 28, 2022</p>
+            <p class="end">End: November 23, 2022</p>
+        </div>
+    </div>
+    <div class="card retrograde">
+        <h2 class="planet">Saturn</h2>
+        <div class="event-content">
+            <p class="start">Start: June 04, 2022</p>
+            <p class="end">End: October 23, 2022</p>
+        </div>
+    </div>
+  </div>
+  
+      <div class="content planet-viewing" id="planet-viewing">
+          <h2 class="section">Planet Viewing</h2>
+          <div class="card planet-position">
+              <h2 class="date">January 07, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Eastern Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">February 15, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Venus</h3>
+                  <p class="position">At highest altitude in morning sky</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">February 15, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Western Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">March 20, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Venus</h3>
+                  <p class="position">At Greatest Western Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">April 29, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Eastern Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">June 16, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Western Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">August 14, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Saturn</h3>
+                  <p class="position">At Opposition</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">August 27, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Eastern Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">September 16, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Neptune</h3>
+                  <p class="position">At Opposition</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">September 26, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Jupiter</h3>
+                  <p class="position">At Opposition</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">October 8, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Western Elognation</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">November 9, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Uranus</h3>
+                  <p class="position">At Opposition</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">December 8, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mars</h3>
+                  <p class="position">At Opposition</p>
+              </div>
+          </div>
+          <div class="card planet-position">
+              <h2 class="date">December 21, 2022</h2>
+              <div class="event-content">
+                  <h3 class="planet">Mercury</h3>
+                  <p class="position">At Greatest Eastern Elognation</p>
+              </div>
+          </div>
+      </div>
+  
+      <div class="content meteor-showers" id="meteor-showers">
+          <h2 class="section">Meteor Showers</h2>
+          <div class="card meteor-showers">
+            <div class="table-container" role="table" aria-label="Meteor Showers">
+                <div class="flex-table head" role="rowgroup">
+                <div class="flex-row first" role="columnheader">Shower</div>
+                <div class="flex-row" role="columnheader">Activity Period</div>
+                <div class="flex-row" role="columnheader">Peak</div>
+                <div class="flex-row" role="columnheader">Velocity</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Quadrantclasss</div>
+                <div class="flex-row" role="cell">Dec 26 - Jan 16</div>
+                <div class="flex-row" role="cell">January 4, 2022</div>
+                <div class="flex-row" role="cell">40.2 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first">Lyrclasss</div>
+                <div class="flex-row" role="cell">Apr 15 - Apr 29</div>
+                <div class="flex-row" role="cell">April 22, 2022</div>
+                <div class="flex-row" role="cell">46.8 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">eta Aquarclasss</div>
+                <div class="flex-row" role="cell">Apr 15 - May 27</div>
+                <div class="flex-row" role="cell">May 05, 2022</div>
+                <div class="flex-row" role="cell">65.5 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Southern delta Aquarclasss</div>
+                <div class="flex-row" role="cell">Jul 18 - Aug 21</div>
+                <div class="flex-row" role="cell">July 31, 2022</div>
+                <div class="flex-row" role="cell">40.3 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Perseclasss</div>
+                <div class="flex-row" role="cell">Jul 14 - Sep 01</div>
+                <div class="flex-row" role="cell">August 13, 2022</div>
+                <div class="flex-row" role="cell">58.8 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Orionclasss</div>
+                <div class="flex-row" role="cell">Sep 26 - Nov 22</div>
+                <div class="flex-row" role="cell">October 21, 2022</div>
+                <div class="flex-row" role="cell">66.1 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Leonclasss</div>
+                <div class="flex-row" role="cell">Nov 03 - Dec 02</div>
+                <div class="flex-row" role="cell">November 18, 2022</div>
+                <div class="flex-row" role="cell">70.0 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Geminclasss</div>
+                <div class="flex-row" role="cell">Nov 19 - Dec 24</div>
+                <div class="flex-row" role="cell">December 14, 2022</div>
+                <div class="flex-row" role="cell">33.8 km/s</div>
+              </div>
+              <div class="flex-table row" role="rowgroup">
+                <div class="flex-row first" role="cell">Ursclasss</div>
+                <div class="flex-row" role="cell">Dec 13 - Dec 24</div>
+                <div class="flex-row" role="cell">December 22, 2022</div>
+                <div class="flex-row" role="cell">33.0 km/s</div>
+              </div>
+          </div>
+      </div>
+  </body>
+  </html>

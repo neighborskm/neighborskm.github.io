@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astro Almanac</title>
+<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("form").submit(function(){
+      alert("Submit Successful\nThank you for subscribing!");
+    });
+    $("button").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn();
+    $("#div3").fadeIn();
+    $("#div4").fadeIn();
+  });
+  });
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("navDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+      if (!e.target.matches('.dropbtn')) {
+      var navDropdown = document.getElementById("navDropdown");
+        if (navDropdown.classList.contains('show')) {
+          navDropdown.classList.remove('show');
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- Note -->
+<!--
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
+</div> 
+-->
+
+<!-- Header -->
+<div class="header">
+    <img src="images/logo.png" alt="logo"/>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Events
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="navDropdown">
+    <a href="events.html#phases">Moon Phases</a>
+    <a href="events.html#retrogrades">Retrogrades</a>
+    <a href="events.html#planet-viewing">Planet Viewing</a>
+    <a href="events.html#meteor-showers">Meteor Showers</a>    
+  </div>
+  </div> 
+  <a href="glossary.html">Glossary</a>
+</div>
+
+<!--hero grid-->
+<div class="hero">
+  <div class="hero-text">  
+    <h2>Welcome to Astro Almanac</h2><br>
+    <p>Never miss your chance to witness a rare celestial event again. Stay informed 
+    on events such as phases of the Moon, solar <span>&amp;</span> lunar eclipses, planetary 
+    oppositions, meteor showers, <span>&amp;</span> more.</p>
+  </div>
+</div>
+
+<div class="banner"></div>
+
+<div class="container">
+  <div class="container-text">  
+    <button class="button"><span>View Upcoming Events</span></button><br><br>
+    <div class="card" id="div1" style="display: none;">
+      <h3>January 2, 2022</h3>
+      <h3>New Moon</h3>
+    </div>
+    <div class="card" id="div2" style="display: none;">
+      <h3>January 3-4, 2022</h3>
+      <h3>Quadrantids Meteor Shower</h3>
+    </div>
+    <div class="card" id="div3" style="display: none;">
+      <h3>January 7, 2022</h3>
+      <h3>Mercury at Greatest Eastern Elongation</h3>
+    </div>
+    <div class="card" id="div4" style="display: none;">
+      <h3>January 17, 2022</h3>
+      <h3>Full Moon</h3>
+    </div>
+  </div>
+</div>
+
+<div class="banner"></div>
+
+<!--subscriber grid-->
+<div class="split">
+  <div class="left40">
+    <h2>Get Alerted</h2>
+    <h3>Subscribe to event alerts to be notified before astrological events occur. Notifications 
+      can be delivered by e-mail or text.</h3>
+  </div>
+  <div class="right60">
+    <h2 class="form-title">Subscribe Now</h2>
+    <form>
+      <ul class="form">
+        <li>
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" placeholder="Enter your first name here">
+        </li>
+        <li>
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" placeholder="Enter your last name here">
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email here">
+        </li>
+        <li>
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="Enter your phone here">
+        </li>
+        <li>
+          <label for="delivery">Method</label>
+          <select id="delivery" name="delivery">
+          <option value="sms">Text</option>
+          <option value="email">E-mail</option></select>
+        </li>
+        <li>
+          <button type="submit">Submit</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p class="copyright"><span>&#169;</span>2022 AstroAlmanac.com- All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
