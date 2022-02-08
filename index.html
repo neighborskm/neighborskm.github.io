@@ -1,152 +1,161 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 <head>
-<title>Astro Almanac</title>
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $("form").submit(function(){
-      alert("Submit Successful\nThank you for subscribing!");
-    });
-    $("button").click(function(){
-    $("#div1").fadeIn();
-    $("#div2").fadeIn();
-    $("#div3").fadeIn();
-    $("#div4").fadeIn();
-  });
-  });
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
-    function myFunction() {
-      document.getElementById("navDropdown").classList.toggle("show");
-    }
-    
-    // Close the dropdown if the user clicks outside of it
-    window.onclick = function(e) {
-      if (!e.target.matches('.dropbtn')) {
-      var navDropdown = document.getElementById("navDropdown");
-        if (navDropdown.classList.contains('show')) {
-          navDropdown.classList.remove('show');
-        }
-      }
-    }
-  </script>
+<meta charset="utf-8">
+<title>Web Development Tools</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<!-- Note -->
-<!--
-<div style="background:yellow;padding:5px">
-  <h4 style="text-align:center">Resize the browser window to see the responsive effect.</h4>
-</div> 
--->
-
-<!-- Header -->
-<div class="header">
-    <img src="images/logo.png" alt="logo"/>
-</div>
-
-<!-- Navigation Bar -->
-<div class="navbar">
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-  <button class="dropbtn" onclick="myFunction()">Events
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content" id="navDropdown">
-    <a href="events.html#phases">Moon Phases</a>
-    <a href="events.html#retrogrades">Retrogrades</a>
-    <a href="events.html#planet-viewing">Planet Viewing</a>
-    <a href="events.html#meteor-showers">Meteor Showers</a>    
-  </div>
-  </div> 
-  <a href="glossary.html">Glossary</a>
-</div>
-
-<!--hero grid-->
-<div class="hero">
-  <div class="hero-text">  
-    <h2>Welcome to Astro Almanac</h2><br>
-    <p>Never miss your chance to witness a rare celestial event again. Stay informed 
-    on events such as phases of the Moon, solar <span>&amp;</span> lunar eclipses, planetary 
-    oppositions, meteor showers, <span>&amp;</span> more.</p>
-  </div>
-</div>
-
-<div class="banner"></div>
-
-<div class="container">
-  <div class="container-text">  
-    <button class="button"><span>View Upcoming Events</span></button><br><br>
-    <div class="card" id="div1" style="display: none;">
-      <h3>January 2, 2022</h3>
-      <h3>New Moon</h3>
-    </div>
-    <div class="card" id="div2" style="display: none;">
-      <h3>January 3-4, 2022</h3>
-      <h3>Quadrantids Meteor Shower</h3>
-    </div>
-    <div class="card" id="div3" style="display: none;">
-      <h3>January 7, 2022</h3>
-      <h3>Mercury at Greatest Eastern Elongation</h3>
-    </div>
-    <div class="card" id="div4" style="display: none;">
-      <h3>January 17, 2022</h3>
-      <h3>Full Moon</h3>
-    </div>
-  </div>
-</div>
-
-<div class="banner"></div>
-
-<!--subscriber grid-->
-<div class="split">
-  <div class="left40">
-    <h2>Get Alerted</h2>
-    <h3>Subscribe to event alerts to be notified before astrological events occur. Notifications 
-      can be delivered by e-mail or text.</h3>
-  </div>
-  <div class="right60">
-    <h2 class="form-title">Subscribe Now</h2>
-    <form>
-      <ul class="form">
-        <li>
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" placeholder="Enter your first name here">
-        </li>
-        <li>
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" placeholder="Enter your last name here">
-        </li>
-        <li>
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Enter your email here">
-        </li>
-        <li>
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" placeholder="Enter your phone here">
-        </li>
-        <li>
-          <label for="delivery">Method</label>
-          <select id="delivery" name="delivery">
-          <option value="sms">Text</option>
-          <option value="email">E-mail</option></select>
-        </li>
-        <li>
-          <button type="submit">Submit</button>
-        </li>
-      </ul>
-    </form>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer>
-  <p class="copyright"><span>&#169;</span>2022 AstroAlmanac.com- All Rights Reserved</p>
-</footer>
-
+	<div class="layout">
+		<div id="neumorphism" class="link-preview" onclick="window.open('//neumorphism.io/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//neumorphism.io/">
+					<img src="/images/neumorphism.jpg" alt="Neumorphism"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Neumorphism</h2>
+				<p class="desc">Soft UI Shadow Generator</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="glassmorphism" class="link-preview" onclick="window.open('//glassmorphism.com/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//glassmorphism.com/">
+					<img src="/images/glassmorphism.jpg" alt="Glassmorphism"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Glassmorphism</h2>
+				<p class="desc">Glass Card Generator</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="keyframes" class="link-preview" onclick="window.open('//keyframes.app,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//keyframes.app">
+					<img src="/images/keyframes.jpg" alt="Keyframes"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Keyframes</h2>
+				<p class="desc">Animations, Shadows, and Colors</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="magic-pattern " class="link-preview" onclick="window.open('//www.magicpattern.design/tools/css-backgrounds,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//www.magicpattern.design/tools/css-backgrounds">
+					<img src="/images/magic-pattern.jpg" alt="Magic Pattern"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Magic Pattern</h2>
+				<p class="desc">CSS Backgrounds</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="haikei " class="link-preview" onclick="window.open('//haikei.app/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//haikei.app/">
+					<img src="/images/haikei.jpg" alt="Haikei"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Haikei </h2>
+				<p class="desc">Generate unique SVG design assets</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="blobs " class="link-preview" onclick="window.open('//blobs.app/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//blobs.app/">
+					<img src="/images/blobs.jpg" alt="Blobs"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Blobs </h2>
+				<p class="desc">Generate blob shapes</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="web-code-tools" class="link-preview" onclick="window.open('//webcode.tools/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//webcode.tools/">
+					<img src="/images/web-code-tools.jpg" alt="web code tools"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">web code tools</h2>
+				<p class="desc">CSS, HTML Code Generator</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="omatsuri" class="link-preview" onclick="window.open('//omatsuri.app/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//omatsuri.app/">
+					<img src="/images/omatsuri.jpg" alt="Omatsuri"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Omatsuri</h2>
+				<p class="desc">Open source browser tools for everyday use</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="get-waves" class="link-preview" onclick="window.open('//getwaves.io/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//getwaves.io/">
+					<img src="/images/get-waves.jpg" alt="Get Waves"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">Get Waves</h2>
+				<p class="desc">CSS Waves</p>
+				<div class="tags">
+					<p class="lan-tag css">CSS</p>
+				</div>
+			</div>
+		</div>
+		<div id="hls-color-picker" class="link-preview" onclick="window.open('//hslpicker.com/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//hslpicker.com/">
+					<img src="/images/hls-color-picker.jpg" alt="HLS Color Picker"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">HLS Color Picker</h2>
+				<p class="desc">Color Values</p>
+			</div>
+		</div>
+		<div id="favicon-generator" class="link-preview" onclick="window.open('//tools.dynamicdrive.com/favicon/,'mywindow');" style="cursor: pointer;">
+			<div class="preview">
+				<a href="//tools.dynamicdrive.com/favicon/">
+					<img src="/images/favicon-generator.jpg" alt="FavIcon Generator"/>
+				</a>
+			</div>
+			<div class="info">
+				<h2 class="site-name">FavIcon Generator</h2>
+				<p class="desc">FavIcon Generator</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
+
